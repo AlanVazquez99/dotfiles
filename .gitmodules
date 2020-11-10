@@ -4,3 +4,6 @@
 [submodule "vim-config"]
 	path = vim-config
 	url = https://github.com/AlanVazquez99/vim-config.git
+[submodule "themes/powerlevel10k"]
+	path = themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
