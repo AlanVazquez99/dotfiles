@@ -3,6 +3,8 @@ CWD=$(pwd)
 
 LOG_FILE="$CWD/install $(date +%F).log"
 
+OH_MY_ZSH_SRC=$CWD/.oh-my-zsh
+
 VIM_SRC=$CWD/vim-config
 VIM_DST=$HOME/.vim
 
@@ -11,7 +13,7 @@ ZSHRC_DST=$HOME/.zshrc
 
 THEME=powerlevel10k
 ZSH_THEME_SRC=$CWD/themes/$THEME
-ZSH_THEME_DST=$CWD/.oh-my-zsh/custom/themes/$THEME
+ZSH_THEME_DST=$OH_MY_ZSH_SRC/custom/themes/$THEME
 
 CONFIG_OLD=$HOME/.config.old/
 
@@ -89,4 +91,10 @@ echo /bin/bash >$HOME/.shell.pre-oh-my-zsh
 chsh -s /bin/zsh
 step_done
 
+logit "Changing permission of Oh My ZSH"
+chmod -v -R 700 $OH_MY_ZSH_SRC
+step_done
+
+logit "Changing group and owner"
+chown -v -R $(whoami):$(whoami) $OH_MY_ZSH_SRC
 zsh
