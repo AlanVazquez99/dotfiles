@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 CWD=$(pwd)
 
-LOG_FILE="$CWD/install $(date +'%F %X').log"
+LOG_FILE="$CWD/install $(date +%F).log"
 
 VIM_SRC=$CWD/vim-config
 VIM_DST=$HOME/.vim
