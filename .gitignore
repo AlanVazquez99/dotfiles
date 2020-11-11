@@ -5,3 +5,5 @@ znt
 .bash/.bash_logout
 .bash/.profile
 .bash/.bashrc
+
+*.log
