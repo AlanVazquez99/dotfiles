@@ -1,9 +1,15 @@
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "zsh-config/customs/themes/powerlevel10k"]
+	path = zsh-config/customs/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh-config/customs/plugins/zsh-autosuggestions"]
+	path = zsh-config/customs/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "zsh-config/customs/plugins/zsh-syntax-highlighting"]
+	path = zsh-config/customs/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh-config/oh-my-zsh"]
+	path = zsh-config/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule "vim-config"]
 	path = vim-config
 	url = https://github.com/AlanVazquez99/vim-config.git
-[submodule "themes/powerlevel10k"]
-	path = themes/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k.git

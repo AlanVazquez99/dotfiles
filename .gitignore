@@ -2,8 +2,8 @@ coc/extensions/node_modules
 htop/
 procps/
 znt
-.bash/.bash_logout
-.bash/.profile
-.bash/.bashrc
+bash/.bash_logout
+bash/.profile
+bash/.bashrc
 
 *.log

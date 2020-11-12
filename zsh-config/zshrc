@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/.oh-my-zsh"
+export ZSH="$HOME/.config/zsh-config/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -49,7 +49,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -68,7 +68,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM="$ZSH/../customs"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
    zsh-navigation-tools
-   zsh-autosuggestions 
+   zsh-autosuggestions
    zsh-syntax-highlighting
 )
 
@@ -110,13 +110,13 @@ export ARCHFLAGS="-arch x86_64"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-P10K_CONFIG=~/.config/themes/.p10k.zsh
+P10K_CONFIG="$ZSH_CUSTOM/themes/p10k.zsh"
 if [ -f $P10K_CONFIG ]; then
    source $P10K_CONFIG
 fi
 
 # Custom Alias
-ALIAS_PATH=~/.config/.bash/.bash_aliases
+ALIAS_PATH="$HOME/.config/bash/bash_aliases"
 if [ -f $ALIAS_PATH ]; then
    . $ALIAS_PATH
 fi

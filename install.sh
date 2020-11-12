@@ -3,17 +3,13 @@ CWD=$(pwd)
 
 LOG_FILE="$CWD/install $(date +%F).log"
 
-OH_MY_ZSH_SRC=$CWD/.oh-my-zsh
+OH_MY_ZSH_SRC=$CWD/zsh-config/oh-my-zsh
 
 VIM_SRC=$CWD/vim-config
 VIM_DST=$HOME/.vim
 
 ZSHRC_SRC=$CWD/zsh
-ZSHRC_DST=$HOME/.zshrc
-
-THEME=powerlevel10k
-ZSH_THEME_SRC=$CWD/themes/$THEME
-ZSH_THEME_DST=$OH_MY_ZSH_SRC/custom/themes/$THEME
+ZSHRC_DST=$CWD/zsh-config/zshrc
 
 CONFIG_OLD=$HOME/.config.old/
 
@@ -78,7 +74,6 @@ logit "Getting submodules"
 git submodule update --init --recursive
 step_done
 
-copy_files $ZSH_THEME_SRC $ZSH_THEME_DST
 copy_files $ZSHRC_SRC $ZSHRC_DST
 copy_files $VIM_SRC $VIM_DST
 
@@ -88,8 +83,6 @@ move_files $HOME/.profile $CONFIG_OLD
 
 logit "Exporting ENV Variables"
 export SHELL=/usr/bin/zsh
-export ZSH=$CWD/.oh-my-zsh
-echo /bin/bash >$HOME/.shell.pre-oh-my-zsh
 chsh -s /bin/zsh
 step_done
 
@@ -100,3 +93,4 @@ step_done
 logit "Changing group and owner"
 chown -v -R $(whoami):$(whoami) $OH_MY_ZSH_SRC
 zsh
+
