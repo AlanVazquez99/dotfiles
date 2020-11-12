@@ -77,6 +77,8 @@ step_done
 copy_files $ZSHRC_SRC $ZSHRC_DST
 copy_files $VIM_SRC $VIM_DST
 
+npm --prefix $CWD/coc/extensions
+
 mkdir -p $CONFIG_OLD
 move_files $HOME/.bashrc $CONFIG_OLD
 move_files $HOME/.profile $CONFIG_OLD
