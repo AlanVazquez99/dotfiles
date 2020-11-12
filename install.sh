@@ -52,7 +52,7 @@ copy_files() {
 move_files() {
     local SOURCE=$1
     local DESTINY=$2
-    
+
     logit "Moving $SOURCE to $DESTINY"
     mv -v $SOURCE $DESTINY
     step_done
@@ -65,6 +65,8 @@ fetch_updates
 install_dependencies git
 install_dependencies vim
 install_dependencies zsh
+install_dependencies curl
+install_dependencies wget
 
 logit "Getting NodeJS current Source"
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
