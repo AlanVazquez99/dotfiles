@@ -1,6 +1,11 @@
 coc/extensions/node_modules
+coc/extensions/.vim
+coc/memos.json
+package-lock.json
+
 procps/
 znt
+
 bash/.bash_logout
 bash/.profile
 bash/.bashrc
