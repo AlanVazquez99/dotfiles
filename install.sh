@@ -63,12 +63,14 @@ install_dependencies vim
 install_dependencies zsh
 install_dependencies curl
 install_dependencies wget
-
-logit "Getting NodeJS current Source"
-curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
-step_done
-
 install_dependencies nodejs
+install_dependencies npm
+install_dependencies python3
+install_dependencies python3-pip
+
+logit "Installing python jedi and pylint"
+pip3 install jedi pylint
+step_done
 
 logit "Getting submodules"
 git submodule update --init --recursive
@@ -77,7 +79,7 @@ step_done
 copy_files $ZSHRC_SRC $ZSHRC_DST
 copy_files $VIM_SRC $VIM_DST
 
-npm --prefix $CWD/coc/extensions
+npm --prefix $CWD/coc/extensions install
 
 mkdir -p $CONFIG_OLD
 move_files $HOME/.bashrc $CONFIG_OLD
