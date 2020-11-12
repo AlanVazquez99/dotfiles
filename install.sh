@@ -8,8 +8,8 @@ OH_MY_ZSH_SRC=$CWD/zsh-config/oh-my-zsh
 VIM_SRC=$CWD/vim-config
 VIM_DST=$HOME/.vim
 
-ZSHRC_SRC=$CWD/zsh
-ZSHRC_DST=$CWD/zsh-config/zshrc
+ZSHRC_SRC=$CWD/zsh-config/zshrc
+ZSHRC_DST=$HOME/.zshrc
 
 CONFIG_OLD=$HOME/.config.old/
 
