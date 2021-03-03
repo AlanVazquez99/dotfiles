@@ -1,12 +1,101 @@
+
+[submodule "zsh-config/oh-my-zsh"]
+	path = zsh-config/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+# OH-MY-ZSH CUSTOMS
+	# THEMES
 [submodule "zsh-config/customs/themes/powerlevel10k"]
 	path = zsh-config/customs/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+	# EXTENSIONS / PLUGINS
 [submodule "zsh-config/customs/plugins/zsh-autosuggestions"]
 	path = zsh-config/customs/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "zsh-config/customs/plugins/zsh-syntax-highlighting"]
 	path = zsh-config/customs/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "zsh-config/oh-my-zsh"]
-	path = zsh-config/oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
+
+# VIM PLUGINS
+	# GENERAL / UTILITIES
+[submodule "vim-config/pack/global/start/ale"]
+	path = vim-config/pack/global/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "vim-config/pack/global/start/editorconfig-vim"]
+	path = vim-config/pack/global/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "vim-config/pack/global/start/nerdtree-git-plugin"]
+	path = vim-config/pack/global/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "vim-config/pack/global/start/nerdtree"]
+	path = vim-config/pack/global/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "vim-config/pack/global/start/pear-tree"]
+	path = vim-config/pack/global/start/pear-tree
+	url = https://github.com/tmsvg/pear-tree
+[submodule "vim-config/pack/global/start/tabular"]
+	path = vim-config/pack/global/start/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "vim-config/pack/global/start/tagbar"]
+	path = vim-config/pack/global/start/tagbar
+	url = https://github.com/preservim/tagbar
+[submodule "vim-config/pack/global/start/vim-closetag"]
+	path = vim-config/pack/global/start/vim-closetag
+	url = https://github.com/alvan/vim-closetag
+[submodule "vim-config/pack/global/start/vim-gitgutter"]
+	path = vim-config/pack/global/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim-config/pack/global/start/vim-wakatime"]
+	path = vim-config/pack/global/start/vim-wakatime
+	url = https://github.com/wakatime/vim-wakatime
+
+	# SYNTAX / AUTOCOMPLETION / HIGHLIGHT
+[submodule "vim-config/pack/syntax/start/Dockerfile.vim"]
+	path = vim-config/pack/syntax/start/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim
+[submodule "vim-config/pack/syntax/start/SimpylFold"]
+	path = vim-config/pack/syntax/start/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold
+[submodule "vim-config/pack/syntax/start/coc.nvim"]
+	path = vim-config/pack/syntax/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+[submodule "vim-config/pack/syntax/start/csv.vim"]
+	path = vim-config/pack/syntax/start/csv.vim
+	url = https://github.com/chrisbra/csv.vim
+[submodule "vim-config/pack/syntax/start/html5.vim"]
+	path = vim-config/pack/syntax/start/html5.vim
+	url = https://github.com/sheerun/html5.vim
+[submodule "vim-config/pack/syntax/start/pgsql.vim"]
+	path = vim-config/pack/syntax/start/pgsql.vim
+	url = https://github.com/lifepillar/pgsql.vim
+[submodule "vim-config/pack/syntax/start/python-syntax"]
+	path = vim-config/pack/syntax/start/python-syntax
+	url = https://github.com/vim-python/python-syntax
+[submodule "vim-config/pack/syntax/start/vim-javascript"]
+	path = vim-config/pack/syntax/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "vim-config/pack/syntax/start/vim-json"]
+	path = vim-config/pack/syntax/start/vim-json
+	url = https://github.com/elzr/vim-json
+[submodule "vim-config/pack/syntax/start/vim-markdown"]
+	path = vim-config/pack/syntax/start/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
+[submodule "vim-config/pack/syntax/start/vim-python-pep8-indent"]
+	path = vim-config/pack/syntax/start/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent
+[submodule "vim-config/pack/syntax/start/vim-sh"]
+	path = vim-config/pack/syntax/start/vim-sh
+	url = https://github.com/arzg/vim-sh
+[submodule "vim-config/pack/syntax/start/vim-stylus"]
+	path = vim-config/pack/syntax/start/vim-stylus
+	url = https://github.com/wavded/vim-stylus
+[submodule "vim-config/pack/syntax/start/vim-xml"]
+	path = vim-config/pack/syntax/start/vim-xml
+	url = https://github.com/amadeus/vim-xml
+
+	# THEMES
+[submodule "vim-config/pack/themes/start/vim-airline"]
+	path = vim-config/pack/themes/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim-config/pack/themes/start/vim-airline-themes"]
+	path = vim-config/pack/themes/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
