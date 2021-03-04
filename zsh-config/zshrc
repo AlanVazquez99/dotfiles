@@ -144,10 +144,16 @@ if [ -f $P10K_CONFIG ]; then
    source $P10K_CONFIG
 fi
 
-# Custom Alias
+# Genetal Alias
 ALIAS_PATH="$HOME/.config/bash/bash_aliases"
 if [ -f $ALIAS_PATH ]; then
    . $ALIAS_PATH
+fi
+
+# Specific Alias
+ALIAS_HOST_PATH="$HOME/.bash_aliases"
+if [ -f $ALIAS_HOST_PATH ]; then
+   . $ALIAS_HOST_PATH
 fi
 
 
