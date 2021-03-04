@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:/usr/local/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/zsh-config/oh-my-zsh"
@@ -76,11 +76,38 @@ ZSH_CUSTOM="$ZSH/../customs"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-   docker
-   docker-compose
-   zsh-navigation-tools
-   zsh-autosuggestions
-   zsh-syntax-highlighting
+   # Include
+   autojump # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump
+   autopep8 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autopep8
+   colored-man-pages # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages
+   colorize # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colorize
+   command-not-found # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found
+   common-aliases # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
+   copybuffer # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copybuffer
+   copydir # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copydir
+   copyfile # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
+   dircycle # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dircycle 
+   direnv # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/direnv
+   django # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/django
+   docker # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
+   docker-compose # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker-compose
+   emoji # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/emoji
+   extract # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract
+   fzf # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf
+   gitignore # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitignore
+   httpie # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/httpie
+   pip # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/pip
+   profiles # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/profiles
+   safe-paste # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/safe-paste
+   screen # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/screen
+   sudo # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
+   systemadmin # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemadmin
+   ufw # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ufw
+   zsh-navigation-tools # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zsh-navigation-tools
+   
+   # Third-party
+   zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
+   zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -123,5 +150,21 @@ if [ -f $ALIAS_PATH ]; then
    . $ALIAS_PATH
 fi
 
+
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh-config/customs/themes/p10k.zsh.
 [[ ! -f ~/.config/zsh-config/customs/themes/p10k.zsh ]] || source ~/.config/zsh-config/customs/themes/p10k.zsh
+
+# PLUGINS CONFIG
+   # autojump
+[ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
+
+   # Colorize
+ZSH_COLORIZE_TOOL=chroma
+ZSH_COLORIZE_STYLE="dracula"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# fzf
+FZF_BASE="$HOME/.fzf"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -7,12 +7,14 @@ alias umount_d="sudo umount /mnt/d"
 
 
 # ZSH
-# zsh navigation
+	# zsh navigation
 alias aliases='n-aliases'
 alias history='n-history'
 alias printenv='n-env'
 alias cdh='n-cd'
-
+	# Colorized
+alias cat='ccat'
+alias less='cless' 
 
 # Docker
 alias aws='docker run --rm -it -v aws-vol:/root/.aws amazon/aws-cli'
